@@ -21,6 +21,7 @@
     <!-- Argon CSS -->
     <link rel="stylesheet" href="~/admin/assets/css/argon.css?v=1.1.0" type="text/css">
     <link rel="stylesheet" href="~/admin/custom.css" type="text/css">
+    <link rel="stylesheet" href="~/css/pagination.css" type="text/css" />
 </head>
 <body>
     <nav class="sidenav navbar navbar-vertical fixed-left navbar-expand-xs navbar-light bg-white" id="sidenav-main">
@@ -163,9 +164,9 @@
                                     </span>
                                     <div class="media-body ml-2 d-none d-lg-block">
                                         @{
-                                                var userName = User.Claims.Where(x => x.Type.Equals("Name")).FirstOrDefault().Value;
-                                                <span class="mb-0 text-sm  font-weight-bold">@userName</span>
-                                            }
+                                            var userName = User.Claims.Where(x => x.Type.Equals("Name")).FirstOrDefault().Value;
+                                            <span class="mb-0 text-sm  font-weight-bold">@userName</span>
+                                        }
 
                                         @*<span class="mb-0 text-sm  font-weight-bold">@Context.Session.GetString("Name")</span>*@
                                     </div>
@@ -195,9 +196,11 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/pagination.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/Admin.js" asp-append-version="true"></script>
     <script src="~/js/User.js" asp-append-version="true"></script>
+    <script src="~/js/Search.js" asp-append-version="true"></script>
     <!-- Argon Scripts -->
     <!-- Core -->
     @*<script src="~/admin/assets/vendor/jquery/dist/jquery.min.js"></script>
